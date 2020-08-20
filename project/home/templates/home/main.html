@@ -1,0 +1,18 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'home/css/main.css' %}">
+{% endblock %}
+{% block body %}
+<div class="home_container">
+    <h3>Full Name: {{ user.get_name }}</h3>
+    <h3>Email: {{ user.get_email }}</h3>
+    <h3>Phone Number: {{ user.get_phone }}</h3>
+    <hr>
+    <div class="shool">
+        <h3>School: {{ user.profile.school }}</h3>
+        <h4>Passing Date: {{ user.profile.passing_date }}</h4>
+    </div>
+
+</div>
+{% endblock %}

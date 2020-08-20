@@ -1,0 +1,44 @@
+.sub-container{
+    width:50%;
+    margin:auto;
+    margin-top: 5rem;
+}
+.phone, .password{
+    padding:10px;
+    display: inline;
+    margin:10px 5px 20px 6px;
+    border:solid 1px gray;
+    border-radius: 4px;
+
+}
+.phone{
+    width: 200px;
+}
+#id_phone_0{
+    width:120px
+}
+.password{
+    display: block;
+}
+.error{
+    color:red;
+    margin-left: 6px;
+}
+.btn{
+    width:100px;
+    padding:8px;
+    margin: 10px;
+    border:solid 1px rgb(8, 30, 53);
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(8, 30, 53);
+    color:white
+}
+@media(max-width:996px){
+    .sub-container{
+        width: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+.sub-container{
+    width:50%;
+    margin:auto;
+    margin-top: 5rem;
+}
+input, #id_phone_0{
+    padding:10px;
+    margin:10px 5px 28px 6px;
+    border:solid 1px gray;
+    border-radius: 4px;
+    display: inline;
+
+}
+.phone{
+    width: 48%;
+}
+#id_phone_0{
+    width:20%
+}
+
+.password1, .password2, .email, .name{
+    display: block;
+    width: 70%;
+}
+.error{
+    color:red;
+    margin-left: 6px;
+}
+.btn{
+    width:100px;
+    padding:8px;
+    margin: 10px;
+    border:solid 1px rgb(8, 30, 53);
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    display: block;
+    
+}
+.btn:hover{
+    background-color: rgb(8, 30, 53);
+    color:white
+}
+@media(max-width:996px){
+    .sub-container{
+        width: 100%;
+    }
+}

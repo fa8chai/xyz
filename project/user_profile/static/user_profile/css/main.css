@@ -1,0 +1,41 @@
+.profile_container{
+    width: 50%;
+    margin: auto;
+    margin-top: 8rem;
+}
+.error{
+    color:red;
+}
+h3{
+    font-weight: lighter;
+}
+#id_school, #id_passing_date, .btn{
+    display: block;
+    margin:20px 0px 45px 0px;
+    padding:10px;
+    width: 100%;
+    border:solid 1px gray;
+    border-radius: 4px;
+}
+#id_passing_date{
+    width: 96%;
+}
+.btn{
+    width:100px;
+    padding:8px;
+    border:solid 1px rgb(8, 30, 53);
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+.btn:hover{
+    background-color: rgb(8, 30, 53);
+    color:white
+}
+
+@media(max-width:996px){
+    .profile_container{
+        width: 90%;
+    }
+}

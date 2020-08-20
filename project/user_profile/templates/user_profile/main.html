@@ -1,0 +1,28 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'user_profile/css/main.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="profile_container">
+    <form method="POST">
+        {% csrf_token %}
+        {% if error %}
+        <p class="error">{{error}}</p>
+        {% endif %}
+
+        {% for field in form %}
+            <div>
+                <h3>{{field.label_tag}}</h3>
+                {{field}}
+            </div>
+            {% for error in field.errors %}
+            <p class="error">{{error}}</p>
+            {% endfor %}
+        {% endfor %}
+
+        <input class="btn" type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

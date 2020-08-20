@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'home/css/overview.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="users">
+    <h1>Hello Admin {{ user.name }}</h1>
+    {% if users.count %}
+    <p style="text-decoration: underline;">There is {{users.count}} users accounts</p>
+    {% endif %}
+    {% for user in users %}
+        <div class="user">
+            <div>
+                <h3>{{ user.get_name }} - ( {{ user.get_phone }} )</h3>
+                <p>{{ user.profile.school }}</p>
+            </div>
+            <p>{{ user.profile.passing_date }}</p>
+        </div>
+    {% empty %}
+        <div class="user">There is no registered users yet</div>
+    {% endfor %}
+</div>
+{% endblock %}

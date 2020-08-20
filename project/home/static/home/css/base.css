@@ -1,0 +1,26 @@
+body{
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    list-style-type: none;
+    background-color: rgb(8, 30, 53);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: solid 1px rgb(5, 17, 31);
+}
+ul> .logo, .profile, .logout{
+    padding: 10px 25px;
+    border-radius: 20px;
+    border-bottom: solid 2px rgb(4, 12, 22);
+
+}
+.logout{
+    border-bottom: solid 2px rgb(77, 13, 13);
+
+}
+

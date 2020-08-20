@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home/css/base.css' %}">
+    {% block style %}
+    {% endblock %}
+</head>
+<body>
+    <nav class="nav">
+        <ul class="flex-box">
+            <li class="logo"><a style="color: white; text-decoration:unset" href="{% url 'main' %}">XYZ</a></li>
+            {% if user.is_superuser %}{% else %}
+            <li class="profile"><a style="color: white; text-decoration:unset" href="{% url 'profile' %}">Profile</a></li>
+            {% endif %}
+            <li class="logout"><a  href="{% url 'signout' %}" style="color: white; text-decoration:unset">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    {% block body %}
+    {% endblock %}
+    </div>
+
+</body>
+</html>
